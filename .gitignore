@@ -1,3 +1,7 @@
+# ENVS
+.env
+.env.*
+
 # Miscellaneous
 *.class
 *.log

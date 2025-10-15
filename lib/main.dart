@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template_flutter/routes/general/general_pages.dart';
+import 'package:parcial_c1/routes/general/general_pages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,4 +1,4 @@
-.PHONY: dev prod build-dev build-prod format analyze test clean lint
+.PHONY: dev prod build-apk-dev build-apk-prod format analyze test clean lint
 
 format:
 	dart format .
@@ -18,11 +18,11 @@ dev:
 prod:
 	flutter run --dart-define-from-file=.env.prod
 
-build-dev:
-	flutter build --dart-define-from-file=.env.dev 
+build-apk-dev:
+	flutter build apk --dart-define-from-file=.env.dev 
 
-build-prod:
-	flutter build --dart-define-from-file=.env.prod
+build-apk-prod:
+	flutter build apk --dart-define-from-file=.env.prod
 
 install-hooks:
 	@echo "Instalando pre-commit hook..."
