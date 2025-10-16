@@ -21,15 +21,15 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 2),
     );
 
     _opacity = Tween<double>(begin: 0, end: 1).animate(
-      CurvedAnimation(parent: _controller, curve: const Interval(0.0, 0.5)),
+      CurvedAnimation(parent: _controller, curve: const Interval(0.0, 0.3)),
     );
 
     _position = Tween<Offset>(
-      begin: const Offset(0, 0.5),
+      begin: const Offset(0, 0.3),
       end: Offset.zero,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
 
@@ -39,14 +39,14 @@ class _SplashScreenState extends State<SplashScreen>
     ]).animate(
       CurvedAnimation(
         parent: _controller,
-        curve: const Interval(0.6, 1.0, curve: Curves.easeInOut),
+        curve: const Interval(0.3, 1.0, curve: Curves.easeInOut),
       ),
     );
 
     _controller.forward();
 
     // Después de 3 segundos, pasa a /home
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 2), () {
       if (context.mounted) {
         context.go('/');
       }
